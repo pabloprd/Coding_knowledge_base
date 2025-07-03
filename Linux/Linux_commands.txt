@@ -1,0 +1,5 @@
+cd ..
+cd dir
+ls
+dir /B (anaconda prompt ls)
+
