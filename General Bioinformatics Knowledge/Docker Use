@@ -1,1 +1,15 @@
+#Using Docker
+
+Docker version
+docker --version
+
+#Pulling the image to my computer
+#Pulling an image in Docker means downloading a pre-built software package (Docker Image) to my local computer. 
+
+docker pull biocontainers/fastqc:v0.11.9_cv8
+
+#Pullling HISAT2
+
+docker pull quay.io/biocontainers/hisat2:2.2.1 -- he1b5a44_2
+
 
