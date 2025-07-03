@@ -1,0 +1,13 @@
+# File types what they mean and why they are important
+
+SRA: Binary file format used to store raw DNA sequencing data from next generation sequencing
+- Standard for SRA, compressed
+
+FASTQ: Has an identifier line, nucleotide sequence line, plus sign line, quality scores
+- Text based, standard format for raw sequencing data produced by high throughput sequencing machines like illumina
+
+SAM: Text based human readable alignment info for reach read mapped to a reference genome
+- Has info like reference sequence name, mapping position, mapping quality, CIGAR string, etc.
+
+BAM: Binary compressed version of SAM. Has all the information as the above except in very compact form
+
