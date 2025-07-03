@@ -1,5 +1,12 @@
 #Python commands
 
+#Making new environment:
+conda create -n envname
+
+#Difference between pip and conda install
+
+
+
 
 
 
