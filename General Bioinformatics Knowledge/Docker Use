@@ -8,7 +8,16 @@ docker --version
 
 docker pull biocontainers/fastqc:v0.11.9_cv8
 
-#Pullling HISAT2
+#Make sure that the windows environment thing is set correctly
+- Windows needs it to be set to wsl2 not wsl, to change this you have to:
+  - wsl --update
+  - wsl --set-default-version 2
+  - wsl --list --verbose
+  - wsl --set-version <distro_name> 2
+
+
+
+#Pulling HISAT2
 
 docker pull quay.io/biocontainers/hisat2:2.2.1 -- he1b5a44_2
 
