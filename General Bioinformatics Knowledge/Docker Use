@@ -20,5 +20,12 @@ docker pull biocontainers/fastqc:v0.11.9_cv8
 #Pulling HISAT2
 
 docker pull quay.io/biocontainers/hisat2:2.2.1 -- he1b5a44_2
+- This commmand tells DOcker to download the HISAT2 image from the BioContainers registery on Quay
+
+
+#To Run HISAT2 I have to place my FASTQ files and HISAT2 index files in a folder on my computer. Then run this command:
+
+docker run --rm -v C:\Users\yourname\hisat2_data:/data quay.io/biocontainers/hisat2:2.2.1--he1b5a44_2 \
+hisat2 -x /data/genome_index_basename -1 /data/sample_R1.fastq -2 /data/sample_R2.fastq -S /data/output.sam
 
 
