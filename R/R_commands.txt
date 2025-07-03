@@ -1,0 +1,34 @@
+#Here are a list of r commands that I think are important to note and that I find useful
+
+#Renaming a column
+colnames(df)[colnames(df) == "old" ] <- "New name"
+
+#Making a dictionary
+SetNames (list1, list2)
+
+#Dropping a column
+df$column_name <- NULL
+
+#Selecting a row
+table[rowname, column] #or# table[rowname,]
+
+#Summary statistics:
+Summary()
+Mean()
+sd()
+var()
+min(), max()
+quantile()
+
+#Finding a string within a string
+grepl(string)
+
+
+#List applies
+lapply(list or df, function, optional argument) <- always returns a list. Iterates through each element of x and applies the funciton to it
+
+sapply() <- tries to simplify the output to a vector or matrix if possible
+
+vapply() <- similar to sapply but requires you to specify expected data type
+
+mapply() <- multivvariate version of lapply. Applies function to multiple vectors and list
