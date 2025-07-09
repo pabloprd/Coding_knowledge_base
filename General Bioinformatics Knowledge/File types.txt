@@ -11,3 +11,7 @@ SAM: Text based human readable alignment info for reach read mapped to a referen
 
 BAM: Binary compressed version of SAM. Has all the information as the above except in very compact form
 
+FTP: Standard network protcol used to transfer files between computers over a TCP/IP network such as the internet. 
+
+CEL : Data file format primarily used in microarry experiments. Intensity calculations for each spot on a microarray chip. 
+
