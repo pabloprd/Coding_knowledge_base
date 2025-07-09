@@ -22,8 +22,7 @@
 - wget online_file
 - tar -xvzf (file)
 - nano ~/.bashrc (To modify path)
-    'At the end of that file type in export path for the file example: '
-     export PATH=$PATH:/home/yourusername/sratoolkit.3.0.6-ubuntu64/bin
+- At the end of that file type in export path for the file example: export PATH=$PATH:/home/yourusername/sratoolkit.3.0.6-ubuntu64/bin
 - Restart and run again 
 
 
