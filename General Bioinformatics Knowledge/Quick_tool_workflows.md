@@ -1,7 +1,11 @@
 # QUICK TOOL WORKFLOWS in Bash
 
-## SRA
+## SRA (if you have sra tools installed)
+- To fetch all of the SRR files if you have the accession number and put them in all a .txt list:
 
+        #Where PRJNA1169288_SRR_accession list is the accesion number list.
+        prefetch --option-file PRJNA1169288_SRR_accession_list.txt
+  
 - if all sra files in one folder:
 
       for file in /path/to/sra_files/*.sra; do
