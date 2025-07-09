@@ -1,4 +1,4 @@
-***USING THE ZARATAN COMPUTER CLUSTER***
+*USING THE ZARATAN COMPUTER CLUSTER*
 
 to access the cluster I need to use this command:
 ssh -l USSERNAME login.zaratan.umd.edu
