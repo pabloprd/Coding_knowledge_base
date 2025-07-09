@@ -21,3 +21,8 @@ deactivate
 #let me know the versions and stuff
 
 module avail (fastqc, python, etc)
+
+#Downloading files and shit.
+
+#wget command to download stuff:
+wget (https:// whatever website you're trying to get)
