@@ -35,6 +35,8 @@ nano ~/.bashrc
 
 'At the end of that file type in export path for the file example: '
 export PATH=$PATH:/home/yourusername/sratoolkit.3.0.6-ubuntu64/bin
+ 
+#Then restart and and run again
 
 
 
