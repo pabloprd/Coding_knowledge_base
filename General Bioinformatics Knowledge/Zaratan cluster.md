@@ -1,4 +1,4 @@
-Using the Zaratan supercomputer cluster
+####Using the Zaratan supercomputer cluster
 
 to access the cluster I need to use this command:
 ssh -l USSERNAME login.zaratan.umd.edu
@@ -37,6 +37,20 @@ nano ~/.bashrc
 export PATH=$PATH:/home/yourusername/sratoolkit.3.0.6-ubuntu64/bin
  
 #Then restart and and run again
+
+
+#DOWNLOADING SRR STUFF
+Create text accession file
+
+then to loop through that accession file:
+
+while read accession; do
+  prefetch $accession
+done < SRR_Acc_list.txt
+
+
+
+
 
 
 
