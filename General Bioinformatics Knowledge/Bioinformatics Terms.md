@@ -1,5 +1,5 @@
-Gene ontology: Organizational framework that defines terms describing gene product attributes across species
-
+## Gene ontology
+Organizational framework that defines terms describing gene product attributes across species
   - Ontology structure: Defined terms for molecular function, biological process, and cellular component. 
 
   - Gene annotation: Genes/gene products are annotated with specific GO terms based on evidence. These annotations are stored in databases and are easily accessible to annotate. 
