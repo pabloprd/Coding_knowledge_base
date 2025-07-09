@@ -1,5 +1,13 @@
 #Here are a list of r commands that I think are important to note and that I find useful
 
+
+#Reading in a file
+
+read.csv
+
+#Listing files
+list.files(path = "your/directory/path"
+
 #Renaming a column
 colnames(df)[colnames(df) == "old" ] <- "New name"
 
