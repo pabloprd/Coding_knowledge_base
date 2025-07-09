@@ -22,7 +22,19 @@ deactivate
 
 module avail (fastqc, python, etc)
 
-#Downloading files and shit.
+#Downloading SRA files/the SRA tools package
 
 #wget command to download stuff:
 wget (https:// whatever website you're trying to get)
+
+#tar unzip the files
+tar -xvzf (file)
+
+#modify path:
+nano ~/.bashrc
+
+'At the end of that file type in export path for the file example: '
+export PATH=$PATH:/home/yourusername/sratoolkit.3.0.6-ubuntu64/bin
+
+
+
