@@ -1,4 +1,4 @@
-#Sequencing types:
+# Sequencing types:
 
 **Sanger Sequencing**  
 This is an older, highly accurate method that sequences one DNA fragment at a time. It’s not directly comparable to next-generation sequencing (NGS) data because it produces much less data 
