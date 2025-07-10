@@ -1,8 +1,8 @@
 # HISAT2
-- Install via conda
+- Install via conda (Most common)
 
        conda install -c bioconda hisat2
-- Download using precompiled binaries
+- Installation using precompiled binaries
 
       #Download the latest HISAT2 binary (replace URL with the latest version)
       wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.0.4-Linux_x86_64.zip
@@ -17,7 +17,7 @@
       ./hisat2 --help
 
 
-- Building from Source:
+- Installing from Source (Advanced)
 
       # Download and unzip the source
       wget https://github.com/DaehwanKimLab/hisat2/archive/refs/heads/master.zip
