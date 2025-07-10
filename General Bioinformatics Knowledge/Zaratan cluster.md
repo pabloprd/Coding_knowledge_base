@@ -67,6 +67,35 @@ done < SRR_Acc_list.txt
 
 
 
+# ZARATAN sam to bam
+
+
+        #!/bin/bash
+        #SBATCH --job-name=my_job_name          # Name of your job
+        #SBATCH --output=output.txt             # File to write standard output
+        #SBATCH --error=error.txt               # File to write standard error
+        #SBATCH --ntasks=24                     # Number of tasks (cores)
+        #SBATCH --time=01:00:00                 # Maximum runtime (HH:MM:SS)
+        #SBATCH --partition=partition_name      # (Optional) Specify partition/queue
+    
+        # Load any required modules
+        module load sratoolkit
+        module load gcc
+        module load samtools
+    
+    # Convert all SAM files in the current directory to BAM files
+    for samfile in *.sam; do
+      # Extract the base name (remove .sam extension)
+      base="${samfile%.sam}"
+      # Convert SAM to BAM
+      samtools view -Sb "$samfile" > "${base}.bam"
+      echo "Converted $samfile to ${base}.bam"
+    done
+    
+    echo "Started"
+    echo "Done"
+
+
 
 
 
