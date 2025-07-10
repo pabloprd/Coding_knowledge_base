@@ -49,7 +49,7 @@ SRA -> fastq -> .Sam -> R
         expr $(wc -l < sample_1.fastq) / 4
         expr $(wc -l < sample_2.fastq) / 4
 
-### Aligning with HISAT2
+### Aligning with HISAT2 (Human genome)
 - Gene/Transcript-level counts (Important for R data analysis)
         Reference genome Indices: https://daehwankimlab.github.io/hisat2/download/
         genome_snp: For variant-aware alignment
@@ -62,7 +62,7 @@ SRA -> fastq -> .Sam -> R
         wget -O dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat'
         chmod +x datasets dataformat
 
-- Downloading the GRCh38
+- Downloading the GRCh38 human genome
 
          ./datasets download genome accession GCF_000001405.26 --filename GRCh38_dataset.zip
 
@@ -70,6 +70,7 @@ SRA -> fastq -> .Sam -> R
 - Unzip the downloaded package
 
           unzip GRCh38_dataset.zip
+- You should now have a list of different indices for HISAT2 to use
 
 
 
