@@ -1,1 +1,26 @@
 
+
+for sample in $(ls *_1.fastq | sed 's/_1.fastq//'); do
+  hisat2 --phred33 --dta -x reference_index \
+    -1 ${sample}_1.fastq -2 ${sample}_2.fastq \
+    -S ${sample}.sam
+done
+
+#Explanation:
+ls *_1.fastq lists all files ending with _1.fastq (the first read of each pair)
+- sed 's/_1/fastq//' removes the _1.fastq part from each filename leaving just the filename
+
+hisat2--phred33-dta -x reference_index *
+- Runs the Hisat 2 aligner for each sample. 
+- phred33 specifies that the quality scores in your fastq files are in phred+33 format
+-- dta: Tells HISAT2 to report alignments tailored for transcript assemblers
+-  x reference_index: Specifies the prefix of your HISAT2 index files
+
+ -1 ${sample}_1.fastq -2 ${sample}_2.fastq \
+  - Specifies the input fastq files for paired end reads
+
+-S ${sample}.sam
+  - Output SAM files where the alignments for this sample will be saved. 
+
+done 
+ - ends the loop
