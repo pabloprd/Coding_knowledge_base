@@ -46,6 +46,7 @@ SRA -> fastq ->
         expr $(wc -l < sample_1.fastq) / 4
         expr $(wc -l < sample_2.fastq) / 4
 
+### Aligning with HISAT2
 - Gene/Transcript-level counts (Important for R data analysis)
         Reference genome Indices: https://daehwankimlab.github.io/hisat2/download/
         genome_snp: For variant-aware alignment
