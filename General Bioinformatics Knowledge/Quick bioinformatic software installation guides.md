@@ -19,10 +19,16 @@
 - Install using git
 
        git clone https://github.com/DaehwanKimLab/hisat2.git
+  
        # Go into the new package
        cd HISAT2
+  
        #Then make
        make
+  
+      #Test the installation
+      ./hisat2 --help
+         
 
 
 
