@@ -1,6 +1,6 @@
 # ZARATAN BASH SCRIPTS I WROTE FOR REFERENCE
 
-##Sequence Alignment using HISAT2
+## Sequence Alignment using HISAT2
 
     #!/bin/bash
     #SBATCH --job-name=slurm_PRJNA1169288_test.sh          # Name of your job
