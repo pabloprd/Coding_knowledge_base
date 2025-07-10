@@ -1,5 +1,10 @@
 cd ..
+
 cd dir
+
 ls
+
 dir /B (anaconda prompt ls)
 
+#Moving all of one file from the current directory into a target folder
+mv *.ht2 /path/to/folder
