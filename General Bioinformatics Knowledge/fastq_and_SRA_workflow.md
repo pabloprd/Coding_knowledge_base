@@ -53,37 +53,20 @@ SRA -> fastq ->
         genome_tran: For transcriptome-aware alignment, e.g. improved spliced alignment in RNA-seq
         genome_snp_tran: For both SNP and transcriptome-aware alignment
 
-  - Prepare Reference Genome Index:
-  
-          # Most common human genome: https://genome-idx.s3.amazonaws.com/hisat/grch38_genome.tar.gz
-          hisat2-build reference.fa reference_index
-  - Align singular FASTQ reads to the reference genome
-    -For Single-end Reads:
+- Downloading NCBI programs to programmaticaly download genome sequences and related data from the NCBI datasets platform
 
-            hisat2 --phred33 --dta -x reference_index -U sample.fastq -S sample.sam
+        wget -O datasets 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/datasets'
+        wget -O dataformat 'https://ftp.ncbi.nlm.nih.gov/pub/datasets/command-line/v2/linux-amd64/dataformat'
+        chmod +x datasets dataformat
 
-    -For Paired-end Reads:
-  
-          hisat2 --phred33 --dta -x reference_index -1 sample_1.fastq -2 sample_2.fastq -S sample.sam
-     
-  - Align multiple Samples in a Loop
+- Downloading the GRCh38
 
-        for sample in $(ls *_1.fastq | sed 's/_1.fastq//'); do
-          hisat2 --phred33 --dta -x reference_index \
-            -1 ${sample}_1.fastq -2 ${sample}_2.fastq \
-            -S ${sample}.sam
-        done
-    
-  - Convert SAM to BAM and sort
-
-        samtools view -bS sample.sam | samtools sort -o sample.sorted.bam
-
-  - Summarize Alignment statistics
-
-        hisat2 --phred33 --dta -x reference_index -1 sample_1.fastq -2 sample_2.fastq -S sample.sam --summary-file sample.summary.txt
+         ./datasets download genome accession GCF_000001405.26 --filename GRCh38_dataset.zip
 
 
+- Unzip the downloaded package
 
+          unzip GRCh38_dataset.zip
 
 
 
