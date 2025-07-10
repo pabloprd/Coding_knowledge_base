@@ -1,6 +1,9 @@
-# QUICK TOOL WORKFLOWS in Bash
+# Sequence alignment workflow
 
-SRA -> fastq -> 
+SRA -> fastq -> .Sam -> R
+## Overview:
+
+
 
 ## Downloading SRA (if you have sra tools installed)
 - To fetch all of the SRR files if you have the accession number and put them in all a .txt list:
