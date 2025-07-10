@@ -42,6 +42,6 @@
       # Build with make
       make
 
-To run from any directory remember to add to PATH
+TO RUN FROM ANY DIRECTORY REMEMBER TO ADD THE PATH (Also if on supercomputer Zaratan remember to module load gcc beforehand)
 
       export PATH = $PATH:/path/to/hisat2-2.0.4
