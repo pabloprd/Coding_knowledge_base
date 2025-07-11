@@ -64,7 +64,36 @@ done < SRR_Acc_list.txt
         
         echo "Job finished on $(date)"
 
+# ZARATAN sra to fastq
 
+      #!/bin/bash
+      #SBATCH --job-name=sra_to_fastq          # Name of your job
+      #SBATCH --output=sra_to_fastq_output.txt             # File to write standard output
+      #SBATCH --error=sra_to_fastq_errors.txt               # File to write standard error
+      #SBATCH --ntasks=24                     # Number of tasks (cores)
+      #SBATCH --time=010:00:00                 # Maximum runtime (HH:MM:SS)
+      
+      
+      
+      #Load any required modules
+      module load gcc
+      module load openjdk
+      module load sratoolkit
+      module load fastqc
+      
+      #Convert sra to fastq if the sra files are all in folders:
+      find . -type f -name "*.sra" | while read srafile; do
+           fasterq-dump "$srafile" --outdir  PRJNA1169288_results --split-files --threads 8
+      done
+      
+      #Switch directories
+      cd PRJNA1169288_results
+      
+      #quality control
+      fastqc *.fastq
+      
+      #Let me know I'm done
+      echo "done"
 
 
 # ZARATAN sam to bam
