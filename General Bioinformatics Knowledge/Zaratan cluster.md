@@ -95,6 +95,38 @@ done < SRR_Acc_list.txt
       #Let me know I'm done
       echo "done"
 
+# ZARATAN FASTQ to SAM (Alignment)
+
+
+    #!/bin/bash
+    #SBATCH --job-name=test_alignment          # Name of your job
+    #SBATCH --output=output.txt             # File to write standard output
+    #SBATCH --error=error.txt               # File to write standard error
+    #SBATCH --ntasks=24                     # Number of tasks (cores)
+    #SBATCH --time=10:00:00                 # Maximum runtime (HH:MM:SS)
+    #SBATCH --partition=partition_name      # (Optional) Specify partition/queue
+    
+    # Load any required modules
+    module load sratoolkit
+    
+    
+    # Print some job info
+    echo "Job started on $(date)"
+    echo "Running on $SLURM_NTASKS tasks"
+    
+    # align sequences to reference genome (Assuming you have paired end sequences)
+    for sample in $(ls *_1.fastq | sed 's/_1.fastq//'); do
+    # Put in the correct reference_index here. 
+      hisat2 --phred33 --dta -x reference_index \
+        -1 ${sample}_1.fastq -2 ${sample}_2.fastq \
+        -S ${sample}.sam
+    done
+    
+    
+    echo "Job finished on $(date)"
+
+
+
 
 # ZARATAN sam to bam
 
