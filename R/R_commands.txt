@@ -40,3 +40,20 @@ sapply() <- tries to simplify the output to a vector or matrix if possible
 vapply() <- similar to sapply but requires you to specify expected data type
 
 mapply() <- multivvariate version of lapply. Applies function to multiple vectors and list
+
+#filling all na values in R
+df[is.na(df)] <- "Unknown"
+
+
+#To make bottom margins longer for plots
+par(mar = c(8, 4, 4, 2) + 1.0)
+
+#Selecting only columns that start with "O" in R
+df_selected <- df %>% select(starts_with("0"))
+
+#Selecting the column names that contain a letter
+df_selected <- df %>% select(which(grepl("M", names(df))))
+
+#Selecting a sepcific index
+
+
