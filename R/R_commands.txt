@@ -54,6 +54,28 @@ df_selected <- df %>% select(starts_with("0"))
 #Selecting the column names that contain a letter
 df_selected <- df %>% select(which(grepl("M", names(df))))
 
-#Selecting a sepcific index
+#Selecting a specific row
+df[row, ]
+
+#Making dataframe with columns you will use later
+metadata <- data.frame(Samples = colnames(Samples), Sex = "Unk", Ancestry = "Unk")
+
+#Making dataframe based on sample name
+metadata <- metadata %>% mutate(
+    Sex = case_when(
+      grepl("M", Samples) ~ "M",
+      grepl("F", Samples) ~ "F",
+      TRUE ~ Sex
+    ),
+    Ancestry = case_when(
+      grepl("EA", Samples) ~ "EA",
+      grepl("AA", Samples) ~ "AA",
+      TRUE ~ Ancestry
+  )
+)
+
+
+
+
 
 
