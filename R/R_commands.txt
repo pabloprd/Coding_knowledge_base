@@ -74,6 +74,11 @@ metadata <- metadata %>% mutate(
   )
 )
 
+#For loop in R
+for (x in y){
+print(x)
+}
+
 
 
 
