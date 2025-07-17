@@ -79,7 +79,8 @@ for (x in y){
 print(x)
 }
 
-
+#Pivot function. Saved me a bunch of fucking time holy shit. Pissed off lowkey
+pivot_wider to merge all on the same values of one column. 
 
 
 
