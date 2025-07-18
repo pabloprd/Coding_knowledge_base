@@ -83,5 +83,9 @@ print(x)
 pivot_wider to merge all on the same values of one column. 
 
 
+#Deleting multiple columns at once:
+MS_lupus_joined_data <- MS_lupus_joined_data[ , !(names(MS_lupus_joined_data) %in% c('Sample date', 'History Number')) ]
+
+
 
 
