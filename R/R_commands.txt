@@ -89,3 +89,6 @@ MS_lupus_joined_data <- MS_lupus_joined_data[ , !(names(MS_lupus_joined_data) %i
 #Running a t-test based on 
 
 
+#Counting number in a list: length()
+
+
