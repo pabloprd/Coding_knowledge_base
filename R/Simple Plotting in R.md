@@ -1,1 +1,7 @@
+#Heatmap
 
+#Barplot
+
+#Boxplot
+
+#Etc.
