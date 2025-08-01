@@ -7,12 +7,12 @@
       geom_hline(yintercept = abs(hline_threshold), col = "gray", linetype = 'dashed') +
       geom_point(size = 2) +
       scale_colour_manual(
-        values = c("blue", "gray", "red"),
-        labels = c("Downregulated", "Not significant", "Upregulated"),
+        values = c("colors here", "here too"),
+        labels = c("label_name1", "label_name2", "label_name3"),
         drop = FALSE
       )+
       geom_text_repel(
-        data = top_genes,
+        data = dataframe_column4_selection,
         aes(label = dataframe_column4),
         max.overlaps = Inf
       )+
