@@ -95,5 +95,10 @@ MS_lupus_joined_data <- MS_lupus_joined_data[ , !(names(MS_lupus_joined_data) %i
 #I have a dataframe with corresponding rows with columns I wish to add another dataframe with the same rows at the same row value
 
 
+#Making a dataframe of all the gene names in an annotation plot:
+df_long <- tidyr::separate_rows(df_annotations, geneID, sep = "/" )
+
+
+
 
 
