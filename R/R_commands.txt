@@ -99,6 +99,9 @@ MS_lupus_joined_data <- MS_lupus_joined_data[ , !(names(MS_lupus_joined_data) %i
 df_long <- tidyr::separate_rows(df_annotations, geneID, sep = "/" )
 
 
+#Selecting only the sections of the dataframe from a column value you are interested in. 
+MS_Lupus_data[MS_Lupus_data[["Protein FDR Confidence: Combined"]] == "High", ]
+
 
 
 
